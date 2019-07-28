@@ -3,14 +3,14 @@
 <title> The simplest HTML example 
 </title>
 </head>
-<body onload="loadCSV('movieSimple.csv')"">
+<body onload="loadCSV('movieSimple2.csv')"">
 <h1> This is  an HTML Page </h1>
 </body>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script >
-    async function loadCSV(path){
-        var data = await d3.csv(path);
-        console.log(data.keys());
+    async function loadCSV(path){        
+        var data = await d3.tsv("https://githubnewcomer.github.io/vizPro/"+path);
+        console.log(data[1]);
     }
 </script>
 </html>

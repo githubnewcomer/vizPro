@@ -3,7 +3,13 @@
 <title> The simplest HTML example 
 </title>
 </head>
-<body>
+<body onload="loadCSV('movieSimple.csv')"">
 <h1> This is  an HTML Page </h1>
 </body>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script >
+    async function loadCSV(path){
+        await d3.csv(path);
+    }
+</script>
 </html>

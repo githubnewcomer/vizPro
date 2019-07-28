@@ -9,7 +9,8 @@
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script >
     async function loadCSV(path){
-        await d3.csv(path);
+        var data = await d3.csv(path);
+        console.log(data.keys());
     }
 </script>
 </html>
